@@ -1,3 +1,4 @@
+import { API_URL } from "./constants";
 
 interface ApiConfig {
     baseUrl: string;
@@ -20,7 +21,7 @@ class Api {
         if (res.ok) {
             return res.json();
         } else {
-            return Promise.reject(`Ошибка: ${res.status}`);
+            return Promise.reject(`Error: ${res.status}`);
         }
     };
 
@@ -83,7 +84,7 @@ class Api {
 }
 
 export const api = new Api({
-    baseUrl: 'http://localhost:4000',
+    baseUrl: API_URL,
     authHeaders: () => ({
         authorization: 'Bearer ' + localStorage.getItem('jwt'),
         'Content-Type': 'application/json',

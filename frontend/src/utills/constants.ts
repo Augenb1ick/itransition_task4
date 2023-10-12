@@ -3,29 +3,29 @@ type ErrorMessages = {
     [key: string]: string;
 };
 
-export const API_URL = '';
+export const API_URL = 'https://testing-web';
 
-export const CONFLICT_ERR = 'Ошибка: 409';
+export const CONFLICT_ERR = 'Error: 409';
 export const CONFLICT_ERR_MESSAGE =
-    'Пользователь с таким email уже зарегистрирован!';
+    'A user with this email is already registered!';
 
-export const DENIED_ERROR = 'Ошибка: 401';
-export const DENIED_ERROR_MESSAGE = 'Логин или пароль указаны неверно!';
+export const DENIED_ERROR = 'Error: 401';
+export const DENIED_ERROR_MESSAGE = 'Incorrect login or password!';
 
-export const FORBIDEN_ERROR = 'Ошибка: 403';
+export const FORBIDEN_ERROR = 'Error: 403';
 export const FORBIDEN_ERROR_MESSAGE =
-    'Ваша учётная запись временно заблокирована. Если вы считает, что это произошло по ошибке, обратитесь к администратору';
+    'Your account is temporarily blocked. If you believe this is a mistake, please contact the administrator.';
 
-export const SERVER_ERROR_MESSAGE = 'Что-то пошло не так! Попробуйте ещё раз.';
+export const SERVER_ERROR_MESSAGE = 'Something went wrong! Please try again.';
 
 export const DELETE_ERROR_MESSAGE =
-    'При удалении произошла ошибка, пожалуйста, попробуйте позже!';
+    'An error occurred during deletion, please try again later!';
 export const BLOCK_ERROR_MESSAGE =
-    'При блокировке произошла ошибка, пожалуйста, попробуйте позже!';
+    'An error occurred during blocking, please try again later!';
 export const UNBLOCK_ERROR_MESSAGE =
-    'При разблокировке произошла ошибка, пожалуйста, попробуйте позже!';
+    'An error occurred during unblocking, please try again later!';
 export const UPDATE_USERS_ERROR_MESSAGE =
-    'При обновлении списка пользователей произошла ошибка, пожалуйста, попробуйте позже!';
+    'An error occurred while updating the list of users, please try again later!';
 
 export const gridColumns: GridColDef[] = [
     { field: 'id', headerName: 'Id', width: 250 },
