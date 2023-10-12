@@ -3,7 +3,7 @@ type ErrorMessages = {
     [key: string]: string;
 };
 
-export const API_URL = 'https://testing-web';
+export const API_URL = 'https://testing-web.site';
 
 export const CONFLICT_ERR = 'Error: 409';
 export const CONFLICT_ERR_MESSAGE =
