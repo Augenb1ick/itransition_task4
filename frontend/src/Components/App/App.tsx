@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import {
   Routes,
   Route,
-  Navigate,
   useNavigate,
   useLocation
 } from 'react-router-dom';
-import { UsersContextType, UserDataType } from '../../models/userData';
+import { UserDataType } from '../../models/userData';
 
 
 import Register from '../Register/Register';
@@ -60,7 +59,7 @@ function App() {
           setIsLoggedIn(true);
           navigate(location.pathname, { replace: true });
         })
-        .catch((err) => console.log(err));
+        .catch(() => handleLogOut());
     }
   }, []);
 
