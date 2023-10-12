@@ -1,0 +1,24 @@
+.header {
+    background-color: rgb(224, 224, 224);
+    height: 50px;
+    display: flex;
+}
+
+.header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+}
+
+.header__app-name {
+    font-size: 20px;
+    margin: 0;
+}
+
+.header__greetings {
+    font-size: 18px;
+    margin: 0 0 0 auto;
+}

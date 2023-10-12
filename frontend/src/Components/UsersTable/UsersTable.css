@@ -1,0 +1,15 @@
+.users-table {
+    width: 90%;
+    margin: auto;
+    color: white;
+}
+
+.users-table__title {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    color: black;
+}
+
+.buttons__container {
+    margin: 10px 0;
+}
