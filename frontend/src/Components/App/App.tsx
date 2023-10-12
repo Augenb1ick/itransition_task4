@@ -14,6 +14,7 @@ import Login from '../Login/Login';
 import { api } from '../../utills/api';
 import LoginFormValues from '../../models/LoginFormValues';
 import {
+  DENIED_ERROR,
   DENIED_ERROR_MESSAGE,
   errorMessages
 } from '../../utills/constants';
@@ -131,10 +132,10 @@ function App() {
           })
           .catch(() => {
             setSnackSelfErrorOpened(true)
-            setTimeout(() => setSnackSelfErrorOpened(false), 2000)
           });
       })
-      .catch(() => {
+      .catch((err) => {
+        logOutIfNoAuth(err);
         setSnackErrorOpened(true)
       })
       .finally(() => setIsLoading(false))
@@ -149,11 +150,13 @@ function App() {
             setUsers(data)
             setSnackUnblockOpened(true);
           })
-          .catch(() => {
+          .catch((err) => {
+            logOutIfNoAuth(err);
             setSnackErrorOpened(true)
           });
       })
-      .catch(() => {
+      .catch((err) => {
+        logOutIfNoAuth(err);
         setSnackErrorOpened(true)
       })
       .finally(() => setIsLoading(false))
@@ -171,13 +174,17 @@ function App() {
           })
           .catch(() => {
             setSnackSelfErrorOpened(true)
-            setTimeout(() => setSnackSelfErrorOpened(false), 3000)
           });
       })
-      .catch(() => {
+      .catch((err) => {
         setSnackErrorOpened(true)
+        logOutIfNoAuth(err);
       })
       .finally(() => setIsLoading(false))
+  }
+
+  const logOutIfNoAuth = (err: string) => {
+    err === DENIED_ERROR && handleLogOut();
   }
 
   const handleSnackClose = () => {
